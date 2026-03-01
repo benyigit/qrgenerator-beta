@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --ac-bg: #050505;
+  --ac-surface: #0a0a0a;
+  --ac-surface-hover: #121212;
+  --ac-text-primary: #ededed;
+  --ac-text-secondary: #a0a0a0;
+  --ac-border-muted: #1f1f1f;
+  --ac-border-bright: #333333;
+  --ac-accent: #ccff00;
+  /* Acid Green */
+  --ac-cyan: #00f0ff;
+  --font-mono: 'Space Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-mono);
+  background-color: var(--ac-bg);
+  background-image:
+    linear-gradient(var(--ac-border-muted) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ac-border-muted) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: center center;
+  color: var(--ac-text-primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+#root {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid var(--ac-border-bright);
+  background: var(--ac-surface);
+  color: var(--ac-text-primary);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: var(--ac-accent);
+  color: #000;
+  border-color: var(--ac-accent);
+  box-shadow: 0 0 15px rgba(204, 255, 0, 0.4);
+}
+
+input {
+  outline: none;
+  border: 1px solid var(--ac-border-bright);
+  background: var(--ac-surface);
+  color: var(--ac-accent);
+  font-family: var(--font-mono);
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: var(--ac-text-secondary);
+}
+
+input:focus {
+  border-color: var(--ac-accent);
+  box-shadow: 0 0 10px rgba(204, 255, 0, 0.1);
+}
+
+.acid-card {
+  background: var(--ac-surface);
+  border: 1px solid var(--ac-border-bright);
+  position: relative;
+}
+
+.acid-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--ac-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.acid-card:hover::before {
+  transform: scaleX(1);
+}
+
+.gradient-text {
+  color: var(--ac-accent);
+  text-shadow: 0 0 10px rgba(204, 255, 0, 0.5);
+}
+
+/* Custom Animations */
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.flicker-animation {
+  animation: flicker 2s infinite alternate;
+}
