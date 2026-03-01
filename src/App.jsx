@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const App = () => {
   const [url, setUrl] = useState('');
   const [fgColor, setFgColor] = useState('#000000');
-  const [bgColor, setBgColor] = useState('#ff0000');
+  const [bgColor, setBgColor] = useState('#ff00000');
   const [size, setSize] = useState(256);
   const [history, setHistory] = useState([]);
   const [isGenerating, setIsGenerating] = useState(false);
@@ -522,6 +522,20 @@ const App = () => {
           .acid-card {
             margin-bottom: 1rem;
           }
+            .logo-box {
+              width: 100%;
+            padding: 0.75rem 1rem;
+            justify-content: center;
+            gap: 0.5rem;
+            }
+            .logo-box h1 {
+            font-size: 1.5rem; !important;
+            text-alighn: center;
+          
+            }
+            .beta-badge{
+            font-size: 0.65rem;
+            padding: 0.15.rem 0.4rem;}
         }
       `}</style>
     </div>
