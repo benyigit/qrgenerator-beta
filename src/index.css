@@ -8,9 +8,9 @@
   --ac-text-secondary: #a0a0a0;
   --ac-border-muted: #1f1f1f;
   --ac-border-bright: #333333;
-  --ac-accent: #ff00c3;
-  /* Acid Green */
-  --ac-cyan: #00f0ff;
+  --ac-accent: #ff0000;
+
+  --ac-cyan: #e72e15;
   --font-mono: 'Space Mono', monospace;
 }
 
@@ -57,7 +57,7 @@ button:hover {
   background: var(--ac-accent);
   color: #000;
   border-color: var(--ac-accent);
-  box-shadow: 0 0 15px rgba(204, 255, 0, 0.4);
+  box-shadow: 0 0 15px rgba(255, 0, 60, 0.4);
 }
 
 input {
@@ -75,7 +75,7 @@ input::placeholder {
 
 input:focus {
   border-color: var(--ac-accent);
-  box-shadow: 0 0 10px rgba(204, 255, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 0, 60, 0.1);
 }
 
 .acid-card {
@@ -103,7 +103,7 @@ input:focus {
 
 .gradient-text {
   color: var(--ac-accent);
-  text-shadow: 0 0 10px rgba(204, 255, 0, 0.5);
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.5);
 }
 
 /* Custom Animations */
