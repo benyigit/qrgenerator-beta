@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const App = () => {
   const [url, setUrl] = useState('');
   const [fgColor, setFgColor] = useState('#000000');
-  const [bgColor, setBgColor] = useState('#ff00000');
+  const [bgColor, setBgColor] = useState('#ff0000');
   const [size, setSize] = useState(256);
   const [history, setHistory] = useState([]);
   const [isGenerating, setIsGenerating] = useState(false);
